@@ -1,8 +1,8 @@
 const siteMetadata = {
   title: "Kaiwen Luo's Portfolio",
   author: 'Kaiwen Luo',
-  headerTitle: "Kaiwen Luo's TechHub",
-  description: 'My insights',
+  headerTitle: 'Kaiwen Luo TechHub',
+  description: 'Thoughts and insights from tect-savvy',
   language: 'en-us',
   siteUrl: 'https://kaiwenluo.com',
   siteRepo: 'https://github.com/u17zl/portfolio',
