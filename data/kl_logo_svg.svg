@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin slice" width="100%"  height="691.191" viewBox="0 0 494.97 691.191">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.081" y1="0.954" x2="1.081" y2="0.046" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#339"/>
+      <stop offset="0.19" stop-color="#373499"/>
+      <stop offset="0.405" stop-color="#45379b"/>
+      <stop offset="0.632" stop-color="#5b3c9f"/>
+      <stop offset="0.865" stop-color="#7b43a4"/>
+      <stop offset="1" stop-color="#9148a8"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_1" data-name="Path 1" d="M542.228,425.2,435.571,325.388,541.966,221.036l-.244-192.558H357.239L302.02,82.913V28.478H47.258V719.669H541.722ZM195.346,73.388h64V189.042L372.4,75.278l92.765.944L302.02,243.467H195.346ZM151.421,671.926H88.672V73.388h62.749v213.62H317.08L496.542,106.043v95.235L377.319,323.858,496.542,443.48v95.234L317.08,359.121H151.421Zm347.6,0H195.346V401.29H302.02L465.168,568.648H302.02V401.29H259.35V612.614H499.018Z" transform="translate(-47.258 -28.478)" fill="url(#linear-gradient)"/>
+</svg>
