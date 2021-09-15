@@ -1,8 +1,8 @@
 # Personal Portfolio Website
-This is personal website of my works and projects. 
+This is my portfolio website of my works and projects and blogs of my insights. 
 
 ## Address
-please access [https://www.kaiwenluo.com](https://www.kaiwenluo.com)
+please access [https://kaiwenluo.com](https://kaiwenluo.com)
 
 ## Techs
-Powerd by `Sass`, `gh-pages`, `AWS Route53`
+Powerd by `React.js`, `Next.js`, `Tailwind CSS`
