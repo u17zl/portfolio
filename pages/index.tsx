@@ -7,18 +7,71 @@ import formatDate from '@/lib/utils/formatDate'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
-const MAX_DISPLAY = 5
+import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import { getFileBySlug } from '@/lib/mdx'
+import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
 
-export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[] }> = async () => {
-  const posts = await getAllFilesFrontMatter('blog')
+import projectsData from '@/data/projectsData'
+import Card from '@/components/Card'
 
-  return { props: { posts } }
+const DEFAULT_LAYOUT = 'AuthorLayout'
+
+function About({ authorDetails }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { mdxSource, frontMatter } = authorDetails
+
+  return (
+    <MDXLayoutRenderer
+      layout={frontMatter.layout || DEFAULT_LAYOUT}
+      mdxSource={mdxSource}
+      frontMatter={frontMatter}
+    />
+  )
 }
 
-export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+const MAX_DISPLAY = 5
+
+// @ts-ignore
+export const getStaticProps: GetStaticProps<{
+  posts: PostFrontMatter[]
+  authorDetails: { mdxSource: string; frontMatter: AuthorFrontMatter }
+}> = async () => {
+  const posts = await getAllFilesFrontMatter('blog')
+  const authorDetails = await getFileBySlug<AuthorFrontMatter>('authors', ['default'])
+
+  return { props: { posts, authorDetails } }
+}
+
+export default function Home({
+  posts,
+  authorDetails,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <About authorDetails={authorDetails} />
+      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Projects
+          </h1>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            My projects and experiences
+          </p>
+        </div>
+        <div className="container py-12">
+          <div className="flex flex-wrap -m-4">
+            {projectsData.map((d) => (
+              <Card
+                key={d.title}
+                title={d.title}
+                description={d.description}
+                imgSrc={d.imgSrc}
+                href={d.href}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
