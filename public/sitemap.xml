@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kaiwenluo.com/blog/2019-04-27-writting-up-a-walkthrough-of-CTF</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/blog/2020-04-12-how-to-build-a-react-boilerplate</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/tags/ctf</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/tags/javascript</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/tags/linux</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/tags/network</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/tags/react</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/tags/security</loc>
+  </url>
+
+  <url>
+    <loc>https://kaiwenluo.com/tags/webpack</loc>
+  </url>
+</urlset>

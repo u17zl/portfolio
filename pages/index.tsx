@@ -7,48 +7,35 @@ import formatDate from '@/lib/utils/formatDate'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
-import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { getFileBySlug } from '@/lib/mdx'
-import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
-
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 
-const DEFAULT_LAYOUT = 'AuthorLayout'
-
-function About({ authorDetails }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { mdxSource, frontMatter } = authorDetails
-
-  return (
-    <MDXLayoutRenderer
-      layout={frontMatter.layout || DEFAULT_LAYOUT}
-      mdxSource={mdxSource}
-      frontMatter={frontMatter}
-    />
-  )
-}
-
 const MAX_DISPLAY = 5
 
-// @ts-ignore
-export const getStaticProps: GetStaticProps<{
-  posts: PostFrontMatter[]
-  authorDetails: { mdxSource: string; frontMatter: AuthorFrontMatter }
-}> = async () => {
+export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[] }> = async () => {
   const posts = await getAllFilesFrontMatter('blog')
-  const authorDetails = await getFileBySlug<AuthorFrontMatter>('authors', ['default'])
 
-  return { props: { posts, authorDetails } }
+  return { props: { posts } }
 }
 
-export default function Home({
-  posts,
-  authorDetails,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <About authorDetails={authorDetails} />
+      <div className="flex flex-col items-center my-6 xl:flex-row gap-x-12 xl:mb-12">
+        <div className="pt-6">
+          <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Hi, I’m Kaiwen Luo
+          </h1>
+          <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
+            {`Welcome to my potfolio and blog - ${siteMetadata.description}. I am a full-stack developer with nearly 3 years of hands-on experience in designing, developing and implementing modern web applications, hybrid Apps based on cloud infrastructures. I like `}
+            <Link href="/projects">projects</Link>
+            {' and '}
+            <Link href="/blog">blogging</Link>
+            {'. Hope you can know me more from here!'}
+          </h2>
+        </div>
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">

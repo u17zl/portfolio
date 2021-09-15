@@ -7,19 +7,9 @@
       <language>en-us</language>
       <managingEditor>luokw8@gmail.com (Kaiwen Luo)</managingEditor>
       <webMaster>luokw8@gmail.com (Kaiwen Luo)</webMaster>
-      <lastBuildDate>Sat, 11 Apr 2020 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://kaiwenluo.com/feed.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Apr 2019 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://kaiwenluo.com/tags/linux/feed.xml" rel="self" type="application/rss+xml"/>
       
-  <item>
-    <guid>https://kaiwenluo.com/blog/2020-04-12-how-to-build-a-react-boilerplate</guid>
-    <title>How to build a react boilerplate</title>
-    <link>https://kaiwenluo.com/blog/2020-04-12-how-to-build-a-react-boilerplate</link>
-    <description>Build a react boilerplate from scratch using Webpack 4 and Babel</description>
-    <pubDate>Sat, 11 Apr 2020 00:00:00 GMT</pubDate>
-    <author>luokw8@gmail.com (Kaiwen Luo)</author>
-    <category>React</category><category>Javascript</category><category>Webpack</category>
-  </item>
-
   <item>
     <guid>https://kaiwenluo.com/blog/2019-04-27-writting-up-a-walkthrough-of-CTF</guid>
     <title>Writing up a walkthrough of CTF</title>
