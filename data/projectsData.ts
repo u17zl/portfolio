@@ -1,6 +1,6 @@
 const projectsData = [
   {
-    title: 'My Porffolio',
+    title: 'My Portfolio',
     description: `My personal portfolio and blog website with responsive design, 
     developed by TypeScript, React.js, Next.js, Tailwind CSS utilizing Git Hook by 
     ESLint and Husky.`,
@@ -15,19 +15,6 @@ const projectsData = [
     supporting PWA.`,
     imgSrc: '/static/projects/freeitworld.png',
     href: 'https://freeitworld.com',
-  },
-  {
-    title: 'iShare Membership Management System',
-    description: `A membership management system where people can book different types of desk spot and meeting rooms. 
-    Developed by React.js, Material-UI, Express.js, MySQL.`,
-    imgSrc: '/static/projects/ishare.png',
-    href: 'https://www.isharework.com/',
-  },
-  {
-    title: 'PTE Practise System',
-    description: `A PTE practising system developed by PHP, Laravel, jQuery, Bootstrap, MySQL`,
-    imgSrc: '/static/projects/velocity-english.png',
-    href: 'https://velocityenglish.com.au',
   },
   {
     title: 'Stockfolio',
