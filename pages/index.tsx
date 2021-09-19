@@ -28,8 +28,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             Hi, I’m Kaiwen Luo
           </h1>
           <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
-            {`Welcome to my portfolio and blog - ${siteMetadata.description}. I am a full-stack developer with nearly 3 years of hands-on experience in designing, developing and implementing modern web applications, hybrid Apps based on cloud infrastructures. I like `}
-            <Link href="/projects">projects</Link>
+            {`Welcome to my portfolio and blog - ${siteMetadata.description}. I am a full-stack developer with nearly 3 years of hands-on experience in designing, developing and implementing modern web applications, hybrid Apps based on cloud infrastructures. I am good at `}
+            <Link href="/projects">building projects</Link>
             {' and '}
             <Link href="/blog">blogging.</Link>
             <br />
